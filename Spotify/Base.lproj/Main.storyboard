@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pmG-SD-dOH">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Your Library-->
+        <scene sceneID="pcw-UT-Xi4">
+            <objects>
+                <viewController id="2vD-FD-M5S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yn4-lq-BiO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="959-5U-vYg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Your Library" image="book" catalog="system" id="2eq-N3-BLr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDW-n7-Q5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="754"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="yPC-ZF-lhK">
+            <objects>
+                <viewController id="B3n-nR-J5v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3h-0b-fmL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="17C-w8-zEh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="gqY-NS-Kqr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fD-VM-4MS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="83"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Yjr-BU-eX5">
+            <objects>
+                <viewController storyboardIdentifier="H" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U7A-bA-v3n" customClass="HomeController" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E2d-zy-jog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xmx-bo-bKS">
+                                <rect key="frame" x="8" y="140" width="359" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9qq-XB-apz">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="U7A-bA-v3n" id="7VG-p4-y91"/>
+                                    <outlet property="delegate" destination="U7A-bA-v3n" id="LSk-Lk-EyY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pfQ-wY-69M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xmx-bo-bKS" firstAttribute="height" secondItem="E2d-zy-jog" secondAttribute="height" multiplier="0.23399" id="00f-KO-Nmt"/>
+                            <constraint firstItem="xmx-bo-bKS" firstAttribute="leading" secondItem="pfQ-wY-69M" secondAttribute="leading" constant="8" id="GDn-0q-6Ht"/>
+                            <constraint firstItem="pfQ-wY-69M" firstAttribute="trailing" secondItem="xmx-bo-bKS" secondAttribute="trailing" constant="8" id="K2P-Si-Q0r"/>
+                            <constraint firstItem="xmx-bo-bKS" firstAttribute="top" secondItem="pfQ-wY-69M" secondAttribute="top" id="YI1-Xr-R6J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="MwS-bh-3X1"/>
+                    <connections>
+                        <outlet property="lastListenedLibrariesCollection" destination="xmx-bo-bKS" id="gx1-Tf-aqd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6m6-cW-JrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.8" y="-564.53201970443354"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ihK-Dk-BFb">
+            <objects>
+                <tabBarController id="pmG-SD-dOH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="guT-QA-yhP">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SlW-nm-pDF" kind="relationship" relationship="viewControllers" id="3ts-IV-1F6"/>
+                        <segue destination="B3n-nR-J5v" kind="relationship" relationship="viewControllers" id="sdz-Td-KSt"/>
+                        <segue destination="2vD-FD-M5S" kind="relationship" relationship="viewControllers" id="UJb-hR-qqJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crf-q3-2fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="-261"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ugN-k9-P66">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SlW-nm-pDF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="Bvs-dB-uWl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="csK-qg-sKw">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U7A-bA-v3n" kind="relationship" relationship="rootViewController" id="B4P-hl-7eI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4t-jL-nfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.92307692307692" y="-564.45497630331749"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

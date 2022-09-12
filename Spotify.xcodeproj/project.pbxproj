@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3526B82C28CF7B6C007C2C49 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B82B28CF7B6C007C2C49 /* HomeController.swift */; };
+		3526B83028CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B82E28CF7E8D007C2C49 /* LastListenedPLaylistCollectionCell.swift */; };
+		3526B83128CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3526B82F28CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.xib */; };
+		3526B83328CF83BF007C2C49 /* UIImageView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B83228CF83BF007C2C49 /* UIImageView + Ext.swift */; };
+		3526B83528CF8493007C2C49 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B83428CF8493007C2C49 /* HomeViewModel.swift */; };
+		3526B83928CF84DE007C2C49 /* PlaylistImageAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B83828CF84DE007C2C49 /* PlaylistImageAndName.swift */; };
 		3535280028C7AD89004A76D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353527FF28C7AD89004A76D5 /* GoogleService-Info.plist */; };
 		354650A428C7AA0D00C647FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354650A328C7AA0D00C647FB /* AppDelegate.swift */; };
 		354650A628C7AA0D00C647FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354650A528C7AA0D00C647FB /* SceneDelegate.swift */; };
@@ -20,6 +26,12 @@
 /* Begin PBXFileReference section */
 		27A12E816DA269D75885C41F /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 		2CCEB8CCAD128B33719B1B41 /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3526B82B28CF7B6C007C2C49 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		3526B82E28CF7E8D007C2C49 /* LastListenedPLaylistCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastListenedPLaylistCollectionCell.swift; sourceTree = "<group>"; };
+		3526B82F28CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastListenedPLaylistCollectionCell.xib; sourceTree = "<group>"; };
+		3526B83228CF83BF007C2C49 /* UIImageView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Ext.swift"; sourceTree = "<group>"; };
+		3526B83428CF8493007C2C49 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3526B83828CF84DE007C2C49 /* PlaylistImageAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistImageAndName.swift; sourceTree = "<group>"; };
 		353527FF28C7AD89004A76D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		354650A028C7AA0D00C647FB /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		354650A328C7AA0D00C647FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +56,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3526B82728CF7B0C007C2C49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3526B83828CF84DE007C2C49 /* PlaylistImageAndName.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3526B82928CF7B19007C2C49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3526B83428CF8493007C2C49 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3526B82A28CF7B28007C2C49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3526B82D28CF7DC2007C2C49 /* Cells */,
+				3526B82B28CF7B6C007C2C49 /* HomeController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3526B82D28CF7DC2007C2C49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3526B82E28CF7E8D007C2C49 /* LastListenedPLaylistCollectionCell.swift */,
+				3526B82F28CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3546509728C7AA0D00C647FB = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +136,7 @@
 		3561E8F428C7AEC200ACBCA8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3526B83228CF83BF007C2C49 /* UIImageView + Ext.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -97,6 +144,9 @@
 		3561E8F528C7AECB00ACBCA8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3526B82A28CF7B28007C2C49 /* View */,
+				3526B82928CF7B19007C2C49 /* ViewModel */,
+				3526B82728CF7B0C007C2C49 /* Model */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -181,6 +231,7 @@
 				354650B328C7AA0F00C647FB /* LaunchScreen.storyboard in Resources */,
 				3535280028C7AD89004A76D5 /* GoogleService-Info.plist in Resources */,
 				354650B028C7AA0F00C647FB /* Assets.xcassets in Resources */,
+				3526B83128CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.xib in Resources */,
 				354650AB28C7AA0D00C647FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3526B83028CF7E8E007C2C49 /* LastListenedPLaylistCollectionCell.swift in Sources */,
+				3526B82C28CF7B6C007C2C49 /* HomeController.swift in Sources */,
+				3526B83528CF8493007C2C49 /* HomeViewModel.swift in Sources */,
 				354650A428C7AA0D00C647FB /* AppDelegate.swift in Sources */,
 				354650AE28C7AA0D00C647FB /* Spotify.xcdatamodeld in Sources */,
+				3526B83328CF83BF007C2C49 /* UIImageView + Ext.swift in Sources */,
+				3526B83928CF84DE007C2C49 /* PlaylistImageAndName.swift in Sources */,
 				354650A628C7AA0D00C647FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
