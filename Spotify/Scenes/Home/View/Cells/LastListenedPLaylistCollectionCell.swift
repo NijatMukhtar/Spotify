@@ -17,9 +17,10 @@ class LastListenedPLaylistCollectionCell: UICollectionViewCell {
     @IBOutlet weak var playlistImage: UIImageView!
     
     func configure(data: LastListenedPlaylistCollectionCellProtocol){
-            playlistNameLabel.text = data.titleText
-            playlistImage.loadURL(url: data.imageUrl)
-        }
+        playlistNameLabel.text = data.titleText
+        playlistImage.loadURL(url: data.imageUrl)
+        layer.cornerRadius = 5
+    }
 
 }
 
