@@ -21,6 +21,7 @@ class HomeController: UIViewController {
 
     fileprivate func setup() {
         lastListenedLibrariesCollection.register(UINib(nibName: "\(LastListenedPLaylistCollectionCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(LastListenedPLaylistCollectionCell.self)")
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
     
 }
@@ -38,6 +39,11 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: (collectionView.frame.width / 2) - 2.5, height: (collectionView.frame.height / 3) - 2.5)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "\(PlaylistController.self)") as! PlaylistController
+
+        navigationController?.show(controller, sender: nil)
     }
     
 }
